@@ -10,7 +10,7 @@ import UIKit
 
 class SongDocument: UIDocument {
     var song: Song?
-    var songAsText = "TestSong\n\n\nNathan\n\n\n2015-04-11\n\n\n42\n\nNone\n\nNone\n\nEmpty\n\n1.0,2.0,3.0,4.0"
+    var songAsText = "Title\n\n\nComposer\n\n\n2015-04-11\n\n\n42\n\nNone\n\nNone\n\nEmpty\n\n1.0,2.0,3.0,4.0"
     
     // Called when a document is opened.
     override func loadFromContents(contents: AnyObject, ofType typeName: String, error outError: NSErrorPointer) -> Bool {
@@ -38,6 +38,25 @@ class SongDocument: UIDocument {
     // the document, for autosaving.
     override func contentsForType(typeName: String, error outError: NSErrorPointer) -> AnyObject? {
         return self.songAsText.dataUsingEncoding(NSUTF8StringEncoding)
+    }
+    
+    // Original method
+    override init(fileURL: NSURL) {
+        super.init(fileURL: fileURL)
+    }
+    
+    // Called when a new song is created
+    init(fileURL: NSURL, title _title: String, composer _composer: String) {
+        super.init(fileURL: fileURL)
+        song = Song(title: _title, composer: _composer)
+        songAsText = song!.convertSongToString()
+    }
+    
+    // Called when a song is duplicated
+    init(fileURL: NSURL, song _song: Song) {
+        super.init(fileURL: fileURL)
+        song = _song
+        songAsText = song!.convertSongToString()
     }
     
 }

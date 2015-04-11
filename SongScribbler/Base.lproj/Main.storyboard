@@ -198,6 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="375" y="313"/>
         </scene>
         <!--Open Song-->
         <scene sceneID="Ru9-3m-ayP">
@@ -340,7 +341,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ib-cI-s6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1101" y="298"/>
+            <point key="canvasLocation" x="1121" y="313"/>
         </scene>
         <!--Song View Controller-->
         <scene sceneID="hHY-4C-UZ6">
@@ -387,7 +388,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iK2-Ca-j9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1809" y="298"/>
+            <point key="canvasLocation" x="1905" y="313"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bmD-pk-ECc">
@@ -410,7 +411,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Qav-nC-cvX"/>
-        <segue reference="ak5-7t-WbR"/>
-        <segue reference="PbL-Tp-68R"/>
+        <segue reference="q3H-Yf-jcB"/>
+        <segue reference="vFG-cw-wRt"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -17,7 +17,8 @@ class Song {
     init(title _title: String, composer _composer: String) {
         title = _title
         composer = _composer
-        measures = []
+        var emptyMeasure = Measure(lines: [], length: 42)
+        measures = [emptyMeasure]
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         dateCreated = dateFormatter.stringFromDate(NSDate())
@@ -83,6 +84,9 @@ class Song {
             for lyric in measure.lyrics {
                 theText += "\n" + lyric
             }
+            if (measure.lyrics.isEmpty) {
+                theText += "\n" + "NOLYRICS"
+            }
             theText += "\n"  // Other return character at start of next loop
             
             for line in measure.lines {
@@ -91,6 +95,9 @@ class Song {
                 theText += line.start.y.description + ","
                 theText += line.end.x.description + ","
                 theText += line.end.y.description
+            }
+            if (measure.lines.isEmpty) {
+                theText += "\n" + "NOLINES"
             }
         }
         
@@ -146,20 +153,28 @@ class Song {
             }
             
             var lyrics = measureList[3].componentsSeparatedByString("\n")
+            if (lyrics.count == 1 && lyrics[0] == "NOLYRICS") {
+                // Set lyrics array to empty if NOLYRICS indicator is present
+                lyrics = []
+            }
             
             var lines: [Line] = []
             var lineStrings = measureList[4].componentsSeparatedByString("\n")
-            for lineString in lineStrings {
-                let lineComponents = lineString.componentsSeparatedByString(",")
-                var lineComponentCGFloats: [CGFloat] = []
-                for component in lineComponents {
-                    if let n = NSNumberFormatter().numberFromString(component) {
-                        lineComponentCGFloats.append(CGFloat(n))
+            if (lineStrings.count == 1 && lineStrings[0] == "NOLINES") {
+                // Do nothing if NOLINES indicator is present. lines array remains empty.
+            } else {
+                for lineString in lineStrings {
+                    let lineComponents = lineString.componentsSeparatedByString(",")
+                    var lineComponentCGFloats: [CGFloat] = []
+                    for component in lineComponents {
+                        if let n = NSNumberFormatter().numberFromString(component) {
+                            lineComponentCGFloats.append(CGFloat(n))
+                        }
                     }
-                }
                 let start = CGPoint(x: lineComponentCGFloats[0], y: lineComponentCGFloats[1])
                 let end = CGPoint(x: lineComponentCGFloats[2], y: lineComponentCGFloats[3])
                 lines.append(Line(start: start, end: end))
+                }
             }
             
             measures.append(Measure(lines: lines, length: length!, barType: barType, clef: clef, lyrics: lyrics))
