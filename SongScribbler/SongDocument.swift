@@ -10,7 +10,7 @@ import UIKit
 
 class SongDocument: UIDocument {
     var song: Song?
-    var songAsText = ""
+    var songAsText = "TestSong\n\n\nNathan\n\n\n2015-04-11\n\n\n42\n\nNone\n\nNone\n\nEmpty\n\n1.0,2.0,3.0,4.0"
     
     // Called when a document is opened.
     override func loadFromContents(contents: AnyObject, ofType typeName: String, error outError: NSErrorPointer) -> Bool {

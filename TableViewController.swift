@@ -56,7 +56,7 @@ class TableViewController: UITableViewController {
         documentToOpen.openWithCompletionHandler() {
             (success) in
             if success == true {
-                self.performSegueWithIdentifier("segueToSongView", sender: documentToOpen)
+                self.performSegueWithIdentifier("segueOpenToSongView", sender: documentToOpen)
             }
         }
     }
@@ -99,10 +99,11 @@ class TableViewController: UITableViewController {
     // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "segueToSongView" {
+        if segue.identifier == "segueOpenToSongView" {
             let nextViewController = segue.destinationViewController as SongViewController
             let document = sender as? SongDocument
-            nextViewController.song = document
+            nextViewController.songDocument = document
+            NSLog("prepareForSegue from TableViewController")
         }
     }
 

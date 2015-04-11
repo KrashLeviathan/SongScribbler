@@ -30,8 +30,8 @@ class NewSongViewController: UIViewController {
     
     @IBAction func doneTapped(sender: AnyObject) {
         // TODO: Update conditions to make sure filename (song name) is not already chosen
-        if (false) {
-            createDocument(sender)
+        if (true) {
+            createDocument(fileName: nameTextField.text, sender: sender)
         } else {
             // Display an alert explaining why conditions were not met
             let alertController = UIAlertController(title: "Uh oh!", message: "That song name already exists! Choose another name for your song.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -40,13 +40,13 @@ class NewSongViewController: UIViewController {
         }
     }
     
-    func createDocument(sender: AnyObject) {
+    func createDocument(fileName _fileName: String, sender: AnyObject) {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MM-dd-yyyy HH:mm:ssZZZ"
         
         let dateString = dateFormatter.stringFromDate(NSDate())
         
-        let fileName = "Document \(dateString).songDocument"
+        let fileName = "\(_fileName) \(dateString).songDocument"
         
         let url = self.URLForDocuments().URLByAppendingPathComponent(fileName)
         
@@ -54,7 +54,7 @@ class NewSongViewController: UIViewController {
         documentToCreate.saveToURL(url, forSaveOperation: UIDocumentSaveOperation.ForCreating) {
             (success) in
             if success == true {
-                self.performSegueWithIdentifier("segueToSongView", sender: documentToCreate)
+                self.performSegueWithIdentifier("segueNewToSongView", sender: documentToCreate)
             }
         }
     }

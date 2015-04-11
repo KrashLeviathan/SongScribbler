@@ -227,9 +227,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="7RV-v8-ENC" kind="presentation" identifier="segueToSongView" id="8k7-NO-IqZ"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -244,6 +241,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="7RV-v8-ENC" kind="presentation" identifier="segueOpenToSongView" id="PbL-Tp-68R"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N5S-DG-v7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -335,6 +335,7 @@
                     <connections>
                         <outlet property="composerTextField" destination="maR-BQ-N0B" id="7xj-AN-gdg"/>
                         <outlet property="nameTextField" destination="jM8-R6-bah" id="abB-oA-4lA"/>
+                        <segue destination="7RV-v8-ENC" kind="presentation" identifier="segueNewToSongView" id="vFG-cw-wRt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ib-cI-s6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -353,7 +354,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDV-1P-td9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDV-1P-td9">
                                 <rect key="frame" x="16" y="20" width="37" height="30"/>
                                 <state key="normal" title="Done">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -362,17 +363,27 @@
                                     <action selector="done:" destination="7RV-v8-ENC" eventType="touchUpInside" id="sJx-XM-GYW"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pwQ-YY-rKI">
-                                <rect key="frame" x="16" y="64" width="568" height="30"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kNN-61-nYB">
+                                <rect key="frame" x="16" y="58" width="568" height="522"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="7RV-v8-ENC" id="bRb-Zb-m6b"/>
-                                </connections>
-                            </textField>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kNN-61-nYB" firstAttribute="leading" secondItem="vrW-4G-Adv" secondAttribute="leadingMargin" id="OqW-zb-5y6"/>
+                            <constraint firstItem="gDV-1P-td9" firstAttribute="leading" secondItem="vrW-4G-Adv" secondAttribute="leadingMargin" id="Tu3-Tz-Hd5"/>
+                            <constraint firstItem="gDV-1P-td9" firstAttribute="top" secondItem="hWh-72-NRq" secondAttribute="bottom" id="bhV-ZP-3oM"/>
+                            <constraint firstItem="kNN-61-nYB" firstAttribute="top" secondItem="gDV-1P-td9" secondAttribute="bottom" constant="8" id="ciC-RB-1sY"/>
+                            <constraint firstItem="YW8-2u-FGS" firstAttribute="top" secondItem="kNN-61-nYB" secondAttribute="bottom" constant="20" id="grG-xP-4gN"/>
+                            <constraint firstItem="kNN-61-nYB" firstAttribute="trailing" secondItem="vrW-4G-Adv" secondAttribute="trailingMargin" id="oDI-vK-gXQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="kNN-61-nYB" id="u8Q-DV-Pzu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iK2-Ca-j9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -400,5 +411,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="Qav-nC-cvX"/>
         <segue reference="ak5-7t-WbR"/>
+        <segue reference="PbL-Tp-68R"/>
     </inferredMetricsTieBreakers>
 </document>

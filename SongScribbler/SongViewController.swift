@@ -10,7 +10,7 @@ import UIKit
 
 class SongViewController: UIViewController {
     
-    var song: SongDocument? {
+    var songDocument: SongDocument? {
         didSet {
             self.configureView()
         }
@@ -20,7 +20,7 @@ class SongViewController: UIViewController {
         super.viewDidLoad()
         
         self.configureView()
-        self.navigationItem.hidesBackButton = true
+//        self.navigationItem.hidesBackButton = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,26 +46,27 @@ class SongViewController: UIViewController {
     
     // MARK: - Sample Code for Document App
     
+    
     @IBOutlet weak var textView: UITextView!
     
     @IBAction func done(sender: AnyObject) {
-        if let document: SongDocument = self.song {
+        if let document: SongDocument = self.songDocument {
             document.saveToURL(document.fileURL, forSaveOperation: UIDocumentSaveOperation.ForOverwriting) {
                 (success) in
-                self.navigationController?.popViewControllerAnimated(true)
+                self.dismissViewControllerAnimated(true, completion: nil)
                 return
             }
         }
     }
     
     func configureView() {
-        if let document: SongDocument = self.song {
+        if let document: SongDocument = self.songDocument {
             self.textView?.text = document.songAsText
         }
     }
     
     func textViewDidChange(textView: UITextView!) {
-        if let document: SongDocument = self.song {
+        if let document: SongDocument = self.songDocument {
             document.songAsText = self.textView.text
             document.updateChangeCount(UIDocumentChangeKind.Done)
         }
