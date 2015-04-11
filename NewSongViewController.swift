@@ -94,14 +94,15 @@ class NewSongViewController: UIViewController {
         return NSFileManager.defaultManager().contentsOfDirectoryAtURL(self.URLForDocuments(), includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions(), error: nil) as [NSURL]
     }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "segueNewToSongView" {
+            let nextViewController = segue.destinationViewController as SongViewController
+            let document = sender as? SongDocument
+            nextViewController.songDocument = document
+            NSLog("prepareForSegue from NewSongViewController")
+        }
     }
-    */
 
 }

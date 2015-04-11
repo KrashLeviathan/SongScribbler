@@ -45,7 +45,9 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
 
         let URL = documentURLs[indexPath.row]
-        cell.textLabel?.text = URL.lastPathComponent
+        let fileNameElements = decomposeFileName(fileName: URL.lastPathComponent!)
+        cell.textLabel?.text = fileNameElements.title
+        cell.detailTextLabel?.text = fileNameElements.composer
         
         return cell
     }
@@ -120,12 +122,24 @@ class TableViewController: UITableViewController {
     
     func updateFileList() {
         documentURLs = NSFileManager.defaultManager().contentsOfDirectoryAtURL(self.URLForDocuments(), includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions(), error: nil) as [NSURL]
+        //TODO: - Will this (below) be needed in the final deployment? Right now, it removed .DS_Store, which is a file in every Finder folder
+        documentURLs.removeAtIndex(0)
         
         self.tableView.reloadData()
     }
     
     override func viewWillAppear(animated: Bool) {
         self.updateFileList()
+    }
+    
+    func decomposeFileName(fileName _fileName: String) -> (composer: String, title: String) {
+        // Drop the file extension
+        let newString = _fileName.componentsSeparatedByString(".")[0]
+        
+        // Separate composer and title
+        let smallArray = newString.componentsSeparatedByString(" - ")
+        
+        return (smallArray[0], smallArray[1])
     }
 
 }
