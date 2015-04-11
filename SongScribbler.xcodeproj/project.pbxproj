@@ -13,6 +13,9 @@
 		CB98605F1AD8B1EB00B8034F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB98605E1AD8B1EB00B8034F /* Images.xcassets */; };
 		CB9860621AD8B1EB00B8034F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB9860601AD8B1EB00B8034F /* LaunchScreen.xib */; };
 		CB98606E1AD8B1EC00B8034F /* SongScribblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB98606D1AD8B1EC00B8034F /* SongScribblerTests.swift */; };
+		CB9860781AD8B27500B8034F /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860771AD8B27500B8034F /* SongViewController.swift */; };
+		CB98607C1AD8B38B00B8034F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB98607B1AD8B38B00B8034F /* TableViewController.swift */; };
+		CB98607E1AD8B3A700B8034F /* NewSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB98607D1AD8B3A700B8034F /* NewSongViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		CB9860671AD8B1EC00B8034F /* SongScribblerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SongScribblerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB98606C1AD8B1EC00B8034F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB98606D1AD8B1EC00B8034F /* SongScribblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongScribblerTests.swift; sourceTree = "<group>"; };
+		CB9860771AD8B27500B8034F /* SongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
+		CB98607B1AD8B38B00B8034F /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
+		CB98607D1AD8B3A700B8034F /* NewSongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewSongViewController.swift; path = ../NewSongViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				CB9860571AD8B1EB00B8034F /* AppDelegate.swift */,
-				CB9860591AD8B1EB00B8034F /* ViewController.swift */,
+				CB98607F1AD8B3C000B8034F /* ViewControllers */,
 				CB98605B1AD8B1EB00B8034F /* Main.storyboard */,
 				CB98605E1AD8B1EB00B8034F /* Images.xcassets */,
 				CB9860601AD8B1EB00B8034F /* LaunchScreen.xib */,
@@ -110,6 +116,17 @@
 				CB98606C1AD8B1EC00B8034F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB98607F1AD8B3C000B8034F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB9860591AD8B1EB00B8034F /* ViewController.swift */,
+				CB9860771AD8B27500B8034F /* SongViewController.swift */,
+				CB98607B1AD8B38B00B8034F /* TableViewController.swift */,
+				CB98607D1AD8B3A700B8034F /* NewSongViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB98607E1AD8B3A700B8034F /* NewSongViewController.swift in Sources */,
+				CB9860781AD8B27500B8034F /* SongViewController.swift in Sources */,
 				CB98605A1AD8B1EB00B8034F /* ViewController.swift in Sources */,
 				CB9860581AD8B1EB00B8034F /* AppDelegate.swift in Sources */,
+				CB98607C1AD8B38B00B8034F /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

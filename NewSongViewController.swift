@@ -9,6 +9,9 @@
 import UIKit
 
 class NewSongViewController: UIViewController {
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var composerTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +24,12 @@ class NewSongViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func cancelTapped(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func doneTapped(sender: AnyObject) {
+    }
 
     /*
     // MARK: - Navigation
