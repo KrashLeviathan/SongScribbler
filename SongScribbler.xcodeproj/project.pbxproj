@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB9860581AD8B1EB00B8034F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860571AD8B1EB00B8034F /* AppDelegate.swift */; };
+		CB98605A1AD8B1EB00B8034F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860591AD8B1EB00B8034F /* ViewController.swift */; };
+		CB98605D1AD8B1EB00B8034F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB98605B1AD8B1EB00B8034F /* Main.storyboard */; };
+		CB98605F1AD8B1EB00B8034F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB98605E1AD8B1EB00B8034F /* Images.xcassets */; };
+		CB9860621AD8B1EB00B8034F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB9860601AD8B1EB00B8034F /* LaunchScreen.xib */; };
+		CB98606E1AD8B1EC00B8034F /* SongScribblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB98606D1AD8B1EC00B8034F /* SongScribblerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB9860681AD8B1EC00B8034F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB98604A1AD8B1EB00B8034F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB9860511AD8B1EB00B8034F;
+			remoteInfo = SongScribbler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB9860521AD8B1EB00B8034F /* SongScribbler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongScribbler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB9860561AD8B1EB00B8034F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB9860571AD8B1EB00B8034F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB9860591AD8B1EB00B8034F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB98605C1AD8B1EB00B8034F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB98605E1AD8B1EB00B8034F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CB9860611AD8B1EB00B8034F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CB9860671AD8B1EC00B8034F /* SongScribblerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SongScribblerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB98606C1AD8B1EC00B8034F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB98606D1AD8B1EC00B8034F /* SongScribblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongScribblerTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB98604F1AD8B1EB00B8034F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB9860641AD8B1EC00B8034F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB9860491AD8B1EB00B8034F = {
+			isa = PBXGroup;
+			children = (
+				CB9860541AD8B1EB00B8034F /* SongScribbler */,
+				CB98606A1AD8B1EC00B8034F /* SongScribblerTests */,
+				CB9860531AD8B1EB00B8034F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB9860531AD8B1EB00B8034F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB9860521AD8B1EB00B8034F /* SongScribbler.app */,
+				CB9860671AD8B1EC00B8034F /* SongScribblerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB9860541AD8B1EB00B8034F /* SongScribbler */ = {
+			isa = PBXGroup;
+			children = (
+				CB9860571AD8B1EB00B8034F /* AppDelegate.swift */,
+				CB9860591AD8B1EB00B8034F /* ViewController.swift */,
+				CB98605B1AD8B1EB00B8034F /* Main.storyboard */,
+				CB98605E1AD8B1EB00B8034F /* Images.xcassets */,
+				CB9860601AD8B1EB00B8034F /* LaunchScreen.xib */,
+				CB9860551AD8B1EB00B8034F /* Supporting Files */,
+			);
+			path = SongScribbler;
+			sourceTree = "<group>";
+		};
+		CB9860551AD8B1EB00B8034F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB9860561AD8B1EB00B8034F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB98606A1AD8B1EC00B8034F /* SongScribblerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB98606D1AD8B1EC00B8034F /* SongScribblerTests.swift */,
+				CB98606B1AD8B1EC00B8034F /* Supporting Files */,
+			);
+			path = SongScribblerTests;
+			sourceTree = "<group>";
+		};
+		CB98606B1AD8B1EC00B8034F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB98606C1AD8B1EC00B8034F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB9860511AD8B1EB00B8034F /* SongScribbler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB9860711AD8B1EC00B8034F /* Build configuration list for PBXNativeTarget "SongScribbler" */;
+			buildPhases = (
+				CB98604E1AD8B1EB00B8034F /* Sources */,
+				CB98604F1AD8B1EB00B8034F /* Frameworks */,
+				CB9860501AD8B1EB00B8034F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SongScribbler;
+			productName = SongScribbler;
+			productReference = CB9860521AD8B1EB00B8034F /* SongScribbler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB9860661AD8B1EC00B8034F /* SongScribblerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB9860741AD8B1EC00B8034F /* Build configuration list for PBXNativeTarget "SongScribblerTests" */;
+			buildPhases = (
+				CB9860631AD8B1EC00B8034F /* Sources */,
+				CB9860641AD8B1EC00B8034F /* Frameworks */,
+				CB9860651AD8B1EC00B8034F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB9860691AD8B1EC00B8034F /* PBXTargetDependency */,
+			);
+			name = SongScribblerTests;
+			productName = SongScribblerTests;
+			productReference = CB9860671AD8B1EC00B8034F /* SongScribblerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB98604A1AD8B1EB00B8034F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Krash Leviathan";
+				TargetAttributes = {
+					CB9860511AD8B1EB00B8034F = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					CB9860661AD8B1EC00B8034F = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = CB9860511AD8B1EB00B8034F;
+					};
+				};
+			};
+			buildConfigurationList = CB98604D1AD8B1EB00B8034F /* Build configuration list for PBXProject "SongScribbler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB9860491AD8B1EB00B8034F;
+			productRefGroup = CB9860531AD8B1EB00B8034F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB9860511AD8B1EB00B8034F /* SongScribbler */,
+				CB9860661AD8B1EC00B8034F /* SongScribblerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB9860501AD8B1EB00B8034F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB98605D1AD8B1EB00B8034F /* Main.storyboard in Resources */,
+				CB9860621AD8B1EB00B8034F /* LaunchScreen.xib in Resources */,
+				CB98605F1AD8B1EB00B8034F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB9860651AD8B1EC00B8034F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB98604E1AD8B1EB00B8034F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB98605A1AD8B1EB00B8034F /* ViewController.swift in Sources */,
+				CB9860581AD8B1EB00B8034F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB9860631AD8B1EC00B8034F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB98606E1AD8B1EC00B8034F /* SongScribblerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB9860691AD8B1EC00B8034F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB9860511AD8B1EB00B8034F /* SongScribbler */;
+			targetProxy = CB9860681AD8B1EC00B8034F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB98605B1AD8B1EB00B8034F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB98605C1AD8B1EB00B8034F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CB9860601AD8B1EB00B8034F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB9860611AD8B1EB00B8034F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB98606F1AD8B1EC00B8034F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB9860701AD8B1EC00B8034F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB9860721AD8B1EC00B8034F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SongScribbler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CB9860731AD8B1EC00B8034F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SongScribbler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CB9860751AD8B1EC00B8034F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SongScribblerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SongScribbler.app/SongScribbler";
+			};
+			name = Debug;
+		};
+		CB9860761AD8B1EC00B8034F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SongScribblerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SongScribbler.app/SongScribbler";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB98604D1AD8B1EB00B8034F /* Build configuration list for PBXProject "SongScribbler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB98606F1AD8B1EC00B8034F /* Debug */,
+				CB9860701AD8B1EC00B8034F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB9860711AD8B1EC00B8034F /* Build configuration list for PBXNativeTarget "SongScribbler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB9860721AD8B1EC00B8034F /* Debug */,
+				CB9860731AD8B1EC00B8034F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CB9860741AD8B1EC00B8034F /* Build configuration list for PBXNativeTarget "SongScribblerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB9860751AD8B1EC00B8034F /* Debug */,
+				CB9860761AD8B1EC00B8034F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB98604A1AD8B1EB00B8034F /* Project object */;
+}
