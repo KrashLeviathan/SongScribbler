@@ -9,6 +9,8 @@
 import UIKit
 
 class TableViewController: UITableViewController {
+    
+    var documentURLs: [NSURL] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,24 +32,34 @@ class TableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return documentURLs.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
 
-        // Configure the cell...
-
+        let URL = documentURLs[indexPath.row]
+        cell.textLabel?.text = URL.lastPathComponent
+        
         return cell
     }
-    */
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let URL = documentURLs[indexPath.row]
+        let documentToOpen = SongDocument(fileURL: URL)
+        documentToOpen.openWithCompletionHandler() {
+            (success) in
+            if success == true {
+                self.performSegueWithIdentifier("segueToSongView", sender: documentToOpen)
+            }
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -83,16 +95,17 @@ class TableViewController: UITableViewController {
         return true
     }
     */
-
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "segueToSongView" {
+            let nextViewController = segue.destinationViewController as SongViewController
+            let document = sender as? SongDocument
+            nextViewController.song = document
+        }
     }
-    */
+
     
     // MARK: - Custom Methods
     
@@ -100,5 +113,18 @@ class TableViewController: UITableViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    func URLForDocuments() -> NSURL {
+        return NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last as NSURL
+    }
+    
+    func updateFileList() {
+        documentURLs = NSFileManager.defaultManager().contentsOfDirectoryAtURL(self.URLForDocuments(), includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions(), error: nil) as [NSURL]
+        
+        self.tableView.reloadData()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.updateFileList()
+    }
 
 }

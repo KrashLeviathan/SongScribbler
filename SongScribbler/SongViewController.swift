@@ -9,11 +9,18 @@
 import UIKit
 
 class SongViewController: UIViewController {
+    
+    var song: SongDocument? {
+        didSet {
+            self.configureView()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.configureView()
+        self.navigationItem.hidesBackButton = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,5 +38,37 @@ class SongViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
+    
+    
+    
+    // MARK: - Sample Code for Document App
+    
+    @IBOutlet weak var textView: UITextView!
+    
+    @IBAction func done(sender: AnyObject) {
+        if let document: SongDocument = self.song {
+            document.saveToURL(document.fileURL, forSaveOperation: UIDocumentSaveOperation.ForOverwriting) {
+                (success) in
+                self.navigationController?.popViewControllerAnimated(true)
+                return
+            }
+        }
+    }
+    
+    func configureView() {
+        if let document: SongDocument = self.song {
+            self.textView?.text = document.songAsText
+        }
+    }
+    
+    func textViewDidChange(textView: UITextView!) {
+        if let document: SongDocument = self.song {
+            document.songAsText = self.textView.text
+            document.updateChangeCount(UIDocumentChangeKind.Done)
+        }
+    }
 
 }

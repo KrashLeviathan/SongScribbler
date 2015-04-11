@@ -16,6 +16,11 @@
 		CB9860781AD8B27500B8034F /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860771AD8B27500B8034F /* SongViewController.swift */; };
 		CB98607C1AD8B38B00B8034F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB98607B1AD8B38B00B8034F /* TableViewController.swift */; };
 		CB98607E1AD8B3A700B8034F /* NewSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB98607D1AD8B3A700B8034F /* NewSongViewController.swift */; };
+		CB9860811AD95C9700B8034F /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860801AD95C9700B8034F /* Song.swift */; };
+		CB9860831AD95CD600B8034F /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860821AD95CD600B8034F /* Measure.swift */; };
+		CB9860851AD95DB400B8034F /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860841AD95DB400B8034F /* Line.swift */; };
+		CB9860871AD960E500B8034F /* SongDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860861AD960E500B8034F /* SongDocument.swift */; };
+		CB9860C41AD9998700B8034F /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860C31AD9998700B8034F /* Enumerations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +47,11 @@
 		CB9860771AD8B27500B8034F /* SongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
 		CB98607B1AD8B38B00B8034F /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
 		CB98607D1AD8B3A700B8034F /* NewSongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewSongViewController.swift; path = ../NewSongViewController.swift; sourceTree = "<group>"; };
+		CB9860801AD95C9700B8034F /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		CB9860821AD95CD600B8034F /* Measure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
+		CB9860841AD95DB400B8034F /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		CB9860861AD960E500B8034F /* SongDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDocument.swift; sourceTree = "<group>"; };
+		CB9860C31AD9998700B8034F /* Enumerations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +95,9 @@
 			children = (
 				CB9860571AD8B1EB00B8034F /* AppDelegate.swift */,
 				CB98607F1AD8B3C000B8034F /* ViewControllers */,
-				CB98605B1AD8B1EB00B8034F /* Main.storyboard */,
+				CB9860881AD9649300B8034F /* Model */,
 				CB98605E1AD8B1EB00B8034F /* Images.xcassets */,
+				CB98605B1AD8B1EB00B8034F /* Main.storyboard */,
 				CB9860601AD8B1EB00B8034F /* LaunchScreen.xib */,
 				CB9860551AD8B1EB00B8034F /* Supporting Files */,
 			);
@@ -127,6 +138,18 @@
 				CB98607D1AD8B3A700B8034F /* NewSongViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CB9860881AD9649300B8034F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB9860861AD960E500B8034F /* SongDocument.swift */,
+				CB9860801AD95C9700B8034F /* Song.swift */,
+				CB9860821AD95CD600B8034F /* Measure.swift */,
+				CB9860841AD95DB400B8034F /* Line.swift */,
+				CB9860C31AD9998700B8034F /* Enumerations.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,10 +252,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9860831AD95CD600B8034F /* Measure.swift in Sources */,
+				CB9860811AD95C9700B8034F /* Song.swift in Sources */,
 				CB98607E1AD8B3A700B8034F /* NewSongViewController.swift in Sources */,
+				CB9860C41AD9998700B8034F /* Enumerations.swift in Sources */,
 				CB9860781AD8B27500B8034F /* SongViewController.swift in Sources */,
 				CB98605A1AD8B1EB00B8034F /* ViewController.swift in Sources */,
+				CB9860851AD95DB400B8034F /* Line.swift in Sources */,
 				CB9860581AD8B1EB00B8034F /* AppDelegate.swift in Sources */,
+				CB9860871AD960E500B8034F /* SongDocument.swift in Sources */,
 				CB98607C1AD8B38B00B8034F /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
