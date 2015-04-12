@@ -10,6 +10,10 @@ import UIKit
 
 class SongViewController: UIViewController {
     
+    @IBOutlet weak var drawImage: UIImageView!
+    @IBOutlet weak var eraseImage: UIImageView!
+    
+    @IBOutlet weak var drawEraseSwitch: UISwitch!
     @IBOutlet weak var drawView: DrawView!
     var songDocument: SongDocument? {
         didSet {
@@ -33,6 +37,16 @@ class SongViewController: UIViewController {
         }
     }
 
+    @IBAction func switchFlipped(sender: AnyObject) {
+        switch drawEraseSwitch.on {
+        case true:
+            drawImage.alpha = 0.6
+            eraseImage.alpha = 0.2
+        default:
+            drawImage.alpha = 0.25
+            eraseImage.alpha = 0.75
+        }
+    }
     
     
     // MARK: - Scroll Button methods

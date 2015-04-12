@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB5463B41ADA58FB002514DE /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5463B31ADA58FB002514DE /* PushButton.swift */; };
+		CB5463B61ADA64EF002514DE /* MeasureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5463B51ADA64EF002514DE /* MeasureButton.swift */; };
 		CB9860581AD8B1EB00B8034F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860571AD8B1EB00B8034F /* AppDelegate.swift */; };
 		CB98605A1AD8B1EB00B8034F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860591AD8B1EB00B8034F /* ViewController.swift */; };
 		CB98605D1AD8B1EB00B8034F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB98605B1AD8B1EB00B8034F /* Main.storyboard */; };
@@ -22,6 +24,7 @@
 		CB9860871AD960E500B8034F /* SongDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860861AD960E500B8034F /* SongDocument.swift */; };
 		CB9860C41AD9998700B8034F /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860C31AD9998700B8034F /* Enumerations.swift */; };
 		CB9860D31ADA4C7500B8034F /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860D21ADA4C7500B8034F /* DrawView.swift */; };
+		CB9860D61ADA559A00B8034F /* ArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860D51ADA559A00B8034F /* ArrowButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB5463B31ADA58FB002514DE /* PushButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
+		CB5463B51ADA64EF002514DE /* MeasureButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureButton.swift; sourceTree = "<group>"; };
 		CB9860521AD8B1EB00B8034F /* SongScribbler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongScribbler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9860561AD8B1EB00B8034F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB9860571AD8B1EB00B8034F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +59,7 @@
 		CB9860861AD960E500B8034F /* SongDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDocument.swift; sourceTree = "<group>"; };
 		CB9860C31AD9998700B8034F /* Enumerations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
 		CB9860D21ADA4C7500B8034F /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		CB9860D51ADA559A00B8034F /* ArrowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,7 @@
 		CB9860541AD8B1EB00B8034F /* SongScribbler */ = {
 			isa = PBXGroup;
 			children = (
+				CB9860D41ADA555200B8034F /* User Interface */,
 				CB9860571AD8B1EB00B8034F /* AppDelegate.swift */,
 				CB9860D21ADA4C7500B8034F /* DrawView.swift */,
 				CB98607F1AD8B3C000B8034F /* ViewControllers */,
@@ -153,6 +160,16 @@
 				CB9860C31AD9998700B8034F /* Enumerations.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		CB9860D41ADA555200B8034F /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				CB9860D51ADA559A00B8034F /* ArrowButton.swift */,
+				CB5463B51ADA64EF002514DE /* MeasureButton.swift */,
+				CB5463B31ADA58FB002514DE /* PushButton.swift */,
+			);
+			name = "User Interface";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,10 +275,13 @@
 				CB9860D31ADA4C7500B8034F /* DrawView.swift in Sources */,
 				CB9860831AD95CD600B8034F /* Measure.swift in Sources */,
 				CB9860811AD95C9700B8034F /* Song.swift in Sources */,
+				CB9860D61ADA559A00B8034F /* ArrowButton.swift in Sources */,
+				CB5463B61ADA64EF002514DE /* MeasureButton.swift in Sources */,
 				CB98607E1AD8B3A700B8034F /* NewSongViewController.swift in Sources */,
 				CB9860C41AD9998700B8034F /* Enumerations.swift in Sources */,
 				CB9860781AD8B27500B8034F /* SongViewController.swift in Sources */,
 				CB98605A1AD8B1EB00B8034F /* ViewController.swift in Sources */,
+				CB5463B41ADA58FB002514DE /* PushButton.swift in Sources */,
 				CB9860851AD95DB400B8034F /* Line.swift in Sources */,
 				CB9860581AD8B1EB00B8034F /* AppDelegate.swift in Sources */,
 				CB9860871AD960E500B8034F /* SongDocument.swift in Sources */,
