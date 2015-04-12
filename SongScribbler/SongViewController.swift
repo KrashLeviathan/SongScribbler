@@ -20,7 +20,6 @@ class SongViewController: UIViewController {
         super.viewDidLoad()
         
         self.configureView()
-//        self.navigationItem.hidesBackButton = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,6 +55,8 @@ class SongViewController: UIViewController {
                 self.dismissViewControllerAnimated(true, completion: nil)
                 return
             }
+        } else {
+            self.dismissViewControllerAnimated(true, completion: nil)
         }
     }
     

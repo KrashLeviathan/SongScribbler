@@ -139,11 +139,17 @@
                                 <rect key="frame" x="299" y="138" width="280" height="30"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5pk-hc-aKV"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="47B-k1-hPR">
                                 <rect key="frame" x="259" y="100" width="320" height="30"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="kVU-MD-EjL"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKL-l2-vVm">
                                 <rect key="frame" x="540" y="50" width="39" height="33"/>
@@ -151,6 +157,9 @@
                                 <state key="normal" title="Done">
                                     <color key="titleColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedDone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VRV-qK-X1m"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -197,11 +206,16 @@
                     </view>
                     <connections>
                         <outlet property="composerTextField" destination="7zR-tg-xpB" id="6nr-1f-KHs"/>
+                        <outlet property="dateCreatedLabel" destination="oPq-Z3-9rh" id="E5k-01-iUk"/>
+                        <outlet property="doneButton" destination="ZKL-l2-vVm" id="WzM-Gc-oK6"/>
+                        <outlet property="measureCountLabel" destination="0P7-N7-y7d" id="yUu-C3-YMV"/>
                         <outlet property="titleTextField" destination="47B-k1-hPR" id="Xd8-I5-23Q"/>
                         <segue destination="MQs-cb-2sn" kind="presentation" identifier="segueDuplicateToNew" id="0mF-gv-40e"/>
+                        <segue destination="7RV-v8-ENC" kind="presentation" identifier="segueSettingsToSong" id="IkF-x7-5B1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="9pq-Tz-5Tu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="375" y="313"/>
         </scene>
@@ -289,11 +303,17 @@
                                 <rect key="frame" x="227" y="107" width="357" height="30"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MQs-cb-2sn" id="2ie-fP-8p1"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="maR-BQ-N0B">
                                 <rect key="frame" x="226" y="145" width="358" height="30"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MQs-cb-2sn" id="vxT-sQ-8CK"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6X-CB-rIu">
                                 <rect key="frame" x="16" y="547" width="47" height="33"/>
@@ -367,6 +387,7 @@
                                 </state>
                                 <connections>
                                     <action selector="done:" destination="7RV-v8-ENC" eventType="touchUpInside" id="sJx-XM-GYW"/>
+                                    <segue destination="9pq-Tz-5Tu" kind="unwind" identifier="segueUnwindSongToSettings" unwindAction="unwindToSettingsView:" id="vT3-h9-hHZ"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kNN-61-nYB">

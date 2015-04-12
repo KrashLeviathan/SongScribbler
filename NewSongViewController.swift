@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewSongViewController: UIViewController {
+class NewSongViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var composerTextField: UITextField!
@@ -17,8 +17,7 @@ class NewSongViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configureView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,6 +58,7 @@ class NewSongViewController: UIViewController {
                 (success) in
                 if success == true {
                     self.performSegueWithIdentifier("segueNewToSongView", sender: documentToCreate)
+                    self.setLastSongOpened(songURL: documentToCreate.fileURL)
                 }
             }
         } else {
@@ -68,6 +68,7 @@ class NewSongViewController: UIViewController {
                 (success) in
                 if success == true {
                     self.performSegueWithIdentifier("segueNewToSongView", sender: documentToCreate)
+                    self.setLastSongOpened(songURL: documentToCreate.fileURL)
                 }
             }
         }
@@ -93,6 +94,20 @@ class NewSongViewController: UIViewController {
     func getDocumentURLs() -> [NSURL] {
         return NSFileManager.defaultManager().contentsOfDirectoryAtURL(self.URLForDocuments(), includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions(), error: nil) as [NSURL]
     }
+    
+    func setLastSongOpened(songURL _songURL: NSURL) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setBool(false, forKey: "FirstRun")
+        defaults.setURL(_songURL, forKey: "LastSong")
+    }
+    
+    func configureView() {
+        if (duplicateSong) {
+            nameTextField.text = songToDuplicate?.title
+            composerTextField.text = songToDuplicate?.composer
+        }
+    }
+    
 
     // MARK: - Navigation
 
@@ -103,6 +118,18 @@ class NewSongViewController: UIViewController {
             nextViewController.songDocument = document
             NSLog("prepareForSegue from NewSongViewController")
         }
+    }
+    
+    
+    // MARK: - TextField Methods
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
     }
 
 }

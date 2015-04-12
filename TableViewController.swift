@@ -123,7 +123,9 @@ class TableViewController: UITableViewController {
     func updateFileList() {
         documentURLs = NSFileManager.defaultManager().contentsOfDirectoryAtURL(self.URLForDocuments(), includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions(), error: nil) as [NSURL]
         //TODO: - Will this (below) be needed in the final deployment? Right now, it removed .DS_Store, which is a file in every Finder folder
-        documentURLs.removeAtIndex(0)
+//        if (!documentURLs.isEmpty) {
+//            documentURLs.removeAtIndex(0)
+//        }
         
         self.tableView.reloadData()
     }
