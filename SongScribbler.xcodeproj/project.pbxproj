@@ -21,6 +21,7 @@
 		CB9860851AD95DB400B8034F /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860841AD95DB400B8034F /* Line.swift */; };
 		CB9860871AD960E500B8034F /* SongDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860861AD960E500B8034F /* SongDocument.swift */; };
 		CB9860C41AD9998700B8034F /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860C31AD9998700B8034F /* Enumerations.swift */; };
+		CB9860D31ADA4C7500B8034F /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9860D21ADA4C7500B8034F /* DrawView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		CB9860841AD95DB400B8034F /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		CB9860861AD960E500B8034F /* SongDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDocument.swift; sourceTree = "<group>"; };
 		CB9860C31AD9998700B8034F /* Enumerations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
+		CB9860D21ADA4C7500B8034F /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				CB9860571AD8B1EB00B8034F /* AppDelegate.swift */,
+				CB9860D21ADA4C7500B8034F /* DrawView.swift */,
 				CB98607F1AD8B3C000B8034F /* ViewControllers */,
 				CB9860881AD9649300B8034F /* Model */,
 				CB98605E1AD8B1EB00B8034F /* Images.xcassets */,
@@ -252,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9860D31ADA4C7500B8034F /* DrawView.swift in Sources */,
 				CB9860831AD95CD600B8034F /* Measure.swift in Sources */,
 				CB9860811AD95C9700B8034F /* Song.swift in Sources */,
 				CB98607E1AD8B3A700B8034F /* NewSongViewController.swift in Sources */,
@@ -455,6 +459,7 @@
 				CB9860731AD8B1EC00B8034F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB9860741AD8B1EC00B8034F /* Build configuration list for PBXNativeTarget "SongScribblerTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +468,7 @@
 				CB9860761AD8B1EC00B8034F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

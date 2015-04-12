@@ -10,6 +10,7 @@ import UIKit
 
 class SongViewController: UIViewController {
     
+    @IBOutlet weak var drawView: DrawView!
     var songDocument: SongDocument? {
         didSet {
             self.configureView()
@@ -18,37 +19,60 @@ class SongViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.configureView()
+        configureView()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func configureView() {
+        if let document: SongDocument = self.songDocument {
+            
+        }
     }
-    */
+
     
     
+    // MARK: - Scroll Button methods
+    
+    @IBAction func touchDownLeft(sender: AnyObject) {
+        drawView.scroll(-15)
+    }
+    @IBAction func touchUpLeft(sender: AnyObject) {
+        drawView.scroll(-15)
+    }
+    @IBAction func touchUpOutsideLeft(sender: AnyObject) {
+        self.touchUpLeft(sender)
+    }
+    
+    @IBAction func touchDownRight(sender: AnyObject) {
+        drawView.scroll(15)
+    }
+    @IBAction func touchUpRight(sender: AnyObject) {
+        drawView.scroll(15)
+    }
+    @IBAction func touchUpOutsideRight(sender: AnyObject) {
+        self.touchUpRight(sender)
+    }
     
     
+    // MARK: - Measure Button
+    
+    @IBAction func tappedMeasure(sender: AnyObject) {
+        var barLocation: Int = Int(drawView.rightMostPoint + CGFloat(40))
+        if (drawView.barLocations.last != barLocation) {
+            drawView.barLocations.append(barLocation)
+            drawView.currentMeasureIndex++
+        }
+        drawView.setNeedsDisplay()
+    }
     
     
-    // MARK: - Sample Code for Document App
+    // MARK: - Settings Button
     
-    
-    @IBOutlet weak var textView: UITextView!
-    
-    @IBAction func done(sender: AnyObject) {
+    @IBAction func settings(sender: AnyObject) {
         if let document: SongDocument = self.songDocument {
             document.saveToURL(document.fileURL, forSaveOperation: UIDocumentSaveOperation.ForOverwriting) {
                 (success) in
@@ -59,18 +83,17 @@ class SongViewController: UIViewController {
             self.dismissViewControllerAnimated(true, completion: nil)
         }
     }
+
     
-    func configureView() {
-        if let document: SongDocument = self.songDocument {
-            self.textView?.text = document.songAsText
-        }
-    }
     
-    func textViewDidChange(textView: UITextView!) {
-        if let document: SongDocument = self.songDocument {
-            document.songAsText = self.textView.text
-            document.updateChangeCount(UIDocumentChangeKind.Done)
-        }
-    }
+    
+    // MARK: - Sample Code for Document App
+    
+//    func textViewDidChange(textView: UITextView!) {
+//        if let document: SongDocument = self.songDocument {
+//            document.songAsText = self.textView.text
+//            document.updateChangeCount(UIDocumentChangeKind.Done)
+//        }
+//    }
 
 }
