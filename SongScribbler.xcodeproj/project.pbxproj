@@ -102,12 +102,11 @@
 			isa = PBXGroup;
 			children = (
 				CB9860D41ADA555200B8034F /* User Interface */,
-				CB9860571AD8B1EB00B8034F /* AppDelegate.swift */,
-				CB9860D21ADA4C7500B8034F /* DrawView.swift */,
 				CB98607F1AD8B3C000B8034F /* ViewControllers */,
 				CB9860881AD9649300B8034F /* Model */,
 				CB98605E1AD8B1EB00B8034F /* Images.xcassets */,
 				CB98605B1AD8B1EB00B8034F /* Main.storyboard */,
+				CB9860571AD8B1EB00B8034F /* AppDelegate.swift */,
 				CB9860601AD8B1EB00B8034F /* LaunchScreen.xib */,
 				CB9860551AD8B1EB00B8034F /* Supporting Files */,
 			);
@@ -144,6 +143,7 @@
 			children = (
 				CB9860591AD8B1EB00B8034F /* ViewController.swift */,
 				CB9860771AD8B27500B8034F /* SongViewController.swift */,
+				CB9860D21ADA4C7500B8034F /* DrawView.swift */,
 				CB98607B1AD8B38B00B8034F /* TableViewController.swift */,
 				CB98607D1AD8B3A700B8034F /* NewSongViewController.swift */,
 			);

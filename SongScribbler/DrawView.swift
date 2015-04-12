@@ -21,10 +21,6 @@ class DrawView: UIView {
             } else {
                 measureLength = barLocations[0]
             }
-            //            for line in lines {
-            //                line.start.x += CGFloat(scrollOffset)
-            //                line.end.x += CGFloat(scrollOffset)
-            //            }
             var newMeasure = Measure(lines: lines, length: measureLength)
             measures.append(newMeasure)
             
@@ -77,6 +73,7 @@ class DrawView: UIView {
     
     func scroll(speed: Int) {
         scrollOffset += Float(speed)
+        scrollOffset = max(0, scrollOffset)
         setNeedsDisplay()
     }
     
@@ -88,10 +85,15 @@ class DrawView: UIView {
         
         CGContextBeginPath(context)
         CGContextSetLineCap(context, kCGLineCapRound)
-        CGContextSetStrokeColorWithColor(context, drawColor.CGColor)
-        CGContextSetLineWidth(context, 5)
+        CGContextSetStrokeColorWithColor(context, UIColor(red: 1/255, green: 60/255, blue: 120/255, alpha: 0.7).CGColor)
+//        CGContextSetStrokeColorWithColor(context, UIColor(red: 1/255, green: 87/255, blue: 155/255, alpha: 0.5).CGColor)
+        CGContextSetLineWidth(context, 4)
         self.drawStaff(context: context)
         self.drawBars(context: context, distancesFromLeftSide: barLocations)
+        CGContextStrokePath(context)
+        
+        CGContextSetStrokeColorWithColor(context, drawColor.CGColor)
+        CGContextSetLineWidth(context, 5)
         for line in lines {
             CGContextMoveToPoint(context, (line.start.x - CGFloat(scrollOffset)), line.start.y)
             CGContextAddLineToPoint(context, (line.end.x - CGFloat(scrollOffset)), line.end.y)

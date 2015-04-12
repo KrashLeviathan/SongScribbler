@@ -9,11 +9,18 @@
 import UIKit
 
 class TableViewController: UITableViewController {
+    @IBOutlet weak var tableViewTitle: UINavigationItem!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     var documentURLs: [NSURL] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        
+//        if let font = UIFont(name: "AppleSDGothicNeo-Thin.ttf", size: 17) {
+//            UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: font]
+//            cancelButton.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)
+//        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

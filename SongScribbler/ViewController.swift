@@ -96,11 +96,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
             let alertController = UIAlertController(title: "Warning!", message: "Are you sure you want to delete this song?", preferredStyle: .Alert)
             var respondNo = UIAlertAction(title: "No way!", style: .Cancel) {
                 UIAlertAction in
-                NSLog("They chose no.")
+                //User chose NOT to delete
             }
             var respondYes = UIAlertAction(title: "Yes", style: .Destructive) {
                 UIAlertAction in
-                NSLog("They chose yes.")
+                //User chose to delete
             }
             alertController.addAction(respondYes)
             alertController.addAction(respondNo)
