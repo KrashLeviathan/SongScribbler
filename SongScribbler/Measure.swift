@@ -8,6 +8,7 @@
 
 import Foundation
 
+<<<<<<< HEAD
 class Measure: NSObject, NSCoding {
     
     var barType: BarType = BarType.None
@@ -22,6 +23,17 @@ class Measure: NSObject, NSCoding {
     override init() {}
     
     init(lines _lines: NSMutableArray, length _length: Int) {
+=======
+class Measure {
+    
+    var barType: BarType
+    var lyrics: [String]
+    var lines: [Line]
+    var length: Int
+    var clef: Clef
+    
+    init(lines _lines: [Line], length _length: Int) {
+>>>>>>> 25aef27ce7e253950356e45b64ad5599ed83708e
         lines = _lines
         length = _length
         barType = BarType.None
@@ -29,13 +41,18 @@ class Measure: NSObject, NSCoding {
         clef = Clef.None
     }
     
+<<<<<<< HEAD
     init(lines _lines: NSMutableArray, length _length: Int, barType _barType: BarType, clef _clef: Clef, lyrics _lyrics: [String]) {
+=======
+    init(lines _lines: [Line], length _length: Int, barType _barType: BarType, clef _clef: Clef, lyrics _lyrics: [String]) {
+>>>>>>> 25aef27ce7e253950356e45b64ad5599ed83708e
         lines = _lines
         length = _length
         barType = _barType
         lyrics = _lyrics
         clef = _clef
     }
+<<<<<<< HEAD
     
     
     // MARK: - Encoding and Decoding
@@ -55,4 +72,6 @@ class Measure: NSObject, NSCoding {
         aCoder.encodeInteger(length, forKey: "length")
         aCoder.encodeInteger(clef.rawValue, forKey: "clef")
     }
+=======
+>>>>>>> 25aef27ce7e253950356e45b64ad5599ed83708e
 }

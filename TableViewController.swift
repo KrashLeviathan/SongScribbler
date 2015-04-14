@@ -52,8 +52,13 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
 
         let URL = documentURLs[indexPath.row]
+<<<<<<< HEAD
         let fileNameElements = decomposeFileName(fileName: URL.lastPathComponent)
         cell.textLabel.text = fileNameElements.title
+=======
+        let fileNameElements = decomposeFileName(fileName: URL.lastPathComponent!)
+        cell.textLabel?.text = fileNameElements.title
+>>>>>>> 25aef27ce7e253950356e45b64ad5599ed83708e
         cell.detailTextLabel?.text = fileNameElements.composer
         
         return cell

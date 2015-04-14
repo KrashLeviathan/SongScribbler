@@ -8,6 +8,7 @@
 
 import Foundation
 
+<<<<<<< HEAD
 enum Clef: Int {
     case None = 0
     case Treble = 1
@@ -21,4 +22,19 @@ enum BarType: Int {
     case BeginRepeat = 4
     case EndRepeat = 5
     case BeginAndEndRepeat = 6
+=======
+enum Clef {
+    case None
+    case Treble
+    case Bass
+}
+enum BarType {
+    case None
+    case Standard
+    case Double
+    case End
+    case BeginRepeat
+    case EndRepeat
+    case BeginAndEndRepeat
+>>>>>>> 25aef27ce7e253950356e45b64ad5599ed83708e
 }
